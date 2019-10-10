@@ -4,8 +4,8 @@ function readFile(file) {
   return fs.readFile(file, { encoding: 'utf8' })
     .then(contents => {
       return contents;
-    })
-    
+    });
+
 }
 
 

@@ -15,9 +15,9 @@ describe('Read, Write, and Save a File', () => {
 
   it('reads a file', () => {
     return readFile(source)
-    .then(contents => {
-      expect(contents).toBe(fileContents);
-    })
+      .then(contents => {
+        expect(contents).toBe(fileContents);
+      });
 
   });
 
@@ -25,8 +25,8 @@ describe('Read, Write, and Save a File', () => {
     return writeFile(source, fileContents)
       .then(contents => {
         expect(contents).toBe(fileContents);
-      })
-  })
+      });
+  });
 
 
-})
+});

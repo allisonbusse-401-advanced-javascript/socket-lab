@@ -4,7 +4,7 @@ function writeFile(path, contents) {
   return fs.writeFile(path, contents)
     .then(contents => {
       return contents;
-    })
+    });
 }
 
 
