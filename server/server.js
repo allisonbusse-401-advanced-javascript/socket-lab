@@ -15,6 +15,7 @@ io.on('connection', socket => {
   
   socket.on('file-saved', data => {
     console.log('file updated!');
+    socket.broadcast.emit('file-saved', data)
   });
   
   socket.on('file-error', error => {
