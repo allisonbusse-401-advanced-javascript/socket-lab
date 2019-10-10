@@ -5,6 +5,7 @@ function readFile(file) {
     .then(contents => {
       return contents;
     })
+    
 }
 
 

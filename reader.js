@@ -3,9 +3,9 @@ const readFile = require('./file-reader');
 
 return readFile(process.argv[2])
   .then(contents => {
-    io.emit('file-read', contents);
-
+    io.emit('file-read', { contents: contents, path: process.argv[2] });
   })
-// console.log(fileName);
+  .catch((error) => {
+    io.emit('file-error', error)});
 
 

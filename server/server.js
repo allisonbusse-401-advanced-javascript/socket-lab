@@ -4,21 +4,21 @@ const fs = require('fs').promises;
 io.on('connection', socket => {
 
   socket.on('file-read', data => {
-    console.log(data);
+    console.log(data.contents);
     socket.broadcast.emit('file-read', data)
   });
   
   socket.on('file-write', data => {
-    console.log(data);
+    console.log(data.contents);
     socket.broadcast.emit('file-write', data)
   });
   
-  socket.on('file-saved', socket => {
-    
+  socket.on('file-saved', data => {
+    console.log('file updated!');
   });
   
-  socket.on('file-error', socket => {
-    
+  socket.on('file-error', error => {
+    console.log(error);
   });
 
 
